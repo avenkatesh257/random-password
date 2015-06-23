@@ -9,16 +9,31 @@
 // 2. Define a Triangle constructor function whose prototype is shape. Objects created with Triangle should have three own properties: a, b, c representing the sides of a triangle. 
 // 3. Add a new method to the prototype called getPerimeter.
 
+//for loop is not a function b/c you don't put in an argument//
 
-function makePasswd(passwordLength){
+
+function makePasswd(passwordLength) {
 	var password= '';
 	var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-	for (i=0; i < passwordLength, i++) {
+    for (var i=0; i < passwordLength; i++) {
+
+    var randomcharacter= chars[Math.floor(Math.random() * chars.length)]; //length that you multiply into Math.random will give you upmost value//
+    
+   password= password + randomcharacter;
+
 	}
-	 return (passwordLength)};
-	 }
+	 return password;
+}
 
 
 
+function Animal(){
+	this.color: '';
+	this.numOfLegs= '';
 
+	function Cat(){
+		this.meows = true;
+	}
+}
 
+password= password + randomcharacter is same as password += randomcharacter
